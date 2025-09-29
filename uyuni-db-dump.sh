@@ -5,14 +5,14 @@
 # It reads connection details directly from /etc/rhn/rhn.conf inside the container.
 #
 # Please make sure to use a directory where sufficient disk space is available. 
-# The default is /var/lib/containers/storage/db-dumps/ which is part of the base storage of SUSE Multi Linux Manager   
+# The default is /var/lib/containers/storage/volumes/db-dumps/ which is part of the base storage of SUSE Multi Linux Manager   
 # Location can be set in the "Configuration" section
 
 set -o pipefail # Ensures that a pipeline command fails if any command in it fails
 
 # --- Configuration ---
 CONTAINER_NAME="uyuni-server"
-BACKUP_DIR="/var/lib/containers/storage/db-dumps"
+BACKUP_DIR="/var/lib/containers/storage/volumes/db-dumps"
 CONFIG_FILE="/etc/rhn/rhn.conf"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 
