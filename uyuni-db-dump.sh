@@ -12,7 +12,7 @@ set -o pipefail # Ensures that a pipeline command fails if any command in it fai
 
 # --- Configuration ---
 CONTAINER_NAME="uyuni-server"
-BACKUP_DIR="/var/lib/containers/storage/db-dumps/"
+BACKUP_DIR="/var/lib/containers/storage/db-dumps"
 CONFIG_FILE="/etc/rhn/rhn.conf"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 
